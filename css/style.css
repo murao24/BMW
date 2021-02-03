@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+/* ---------------------------------------------*/
+/* BASIC SETUP */
+/* ---------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 10px;
+  font-family: "Lato", sans-serif;
+  color: #555;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+
+.clear-fix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* ---------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/* ---------------------------------------------*/
+.row {
+  max-width: 1140px;
+  margin: 0 auto 0;
+}
+
+h1,
+h2 {
+  font-size: 5em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  text-align: center;
+  font-size: 6em;
+  margin: 40px auto;
+}
+
+h2::after {
+  content: "";
+  background-color: #e67e22;
+  height: 2px;
+  display: block;
+  width: 130px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* image */
+.showcase {
+  width: 100%;
+  letter-spacing: none;
+}
+
+.showcase li {
+  display: block;
+  float: left;
+}
+
+.photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  /* background-color: #000; */
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0.75;
+}
+
+.showcase img:hover {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+.showcase figcaption {
+  font-size: 2.5em;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.section-tour,
+.section-heritage,
+.section-urban {
+  background-color: #f4f4f4;
+}
+
+small {
+  margin-left: 2em;
+  font-size: 0.4em;
+}
+
+/* background image */
+.bg {
+  background-size: cover;
+  height: 100vh;
+}
+
+/* ---------------------------------------------*/
+/* HEADER */
+/* ---------------------------------------------*/
+header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bike.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: auto;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  margin: 20px 20px 0 0;
+  display: inline-block;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.main-nav {
+  display: flex;
+  list-style: none;
+  margin-top: 45px;
+  margin-left: auto;
+  font-size: 2.2em;
+}
+
+.main-nav li {
+  margin-right: 30px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px 0;
+  color: #fff;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  transition: border-bottom 0.7s, color 0.7s;
+  -webkit-transition: border-bottom 0.5s, color 0.5s;
+  -moz-transition: border-bottom 0.5s, color 0.5s;
+  -ms-transition: border-bottom 0.5s, color 0.5s;
+  -o-transition: border-bottom 0.5s, color 0.5s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+  color: #e67e22;
+}
+
+.header-text {
+  color: #fff;
+  opacity: 0.8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+/* header sticky */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 2px #efefef;
+  z-index: 9999;
+}
+
+.sticky .logo {
+  height: 50px;
+  margin: 10px 0 3px 5px;
+}
+
+.sticky .main-nav {
+  margin-top: 18px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+  color: #555;
+}
+
+.sticky .main-nav li a:hover,
+.sticky .main-nav li a:active {
+  color: #e67e22;
+}
+
+/* ---------------------------------------------*/
+/* SPORT */
+/* ---------------------------------------------*/
+.sport-showcase li {
+  width: 33.3333333%;
+}
+
+.showcase-content {
+  height: auto;
+}
+/* s1000rr */
+.s1000rr {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/s1000rr.jpg);
+}
+
+.hp4race {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/hp4-race.jpg);
+}
+
+.r1250rs {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/r1250rs.jpg);
+}
+
+/* ---------------------------------------------*/
+/* TOUR */
+/* ---------------------------------------------*/
+.tour-showcase li {
+  width: 33.33%;
+}
+
+.tour-showcase-2 li {
+  width: 50%;
+}
+
+.k1600b {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/k1600b.jpg);
+}
+
+.k1600ga {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/k1600grandamerica.jpg);
+}
+
+/* ---------------------------------------------*/
+/* ROADSTER */
+/* ---------------------------------------------*/
+.roadster-showcase li {
+  width: 33.33%;
+}
+
+/* ---------------------------------------------*/
+/* HERITAGE */
+/* ---------------------------------------------*/
+.heritage-showcase li {
+  width: 33.33%;
+}
+
+/* ---------------------------------------------*/
+/* ADVENTURE */
+/* ---------------------------------------------*/
+.adventure-showcase li {
+  width: 50%;
+}
+
+.adventure-showcase-2 li {
+  width: 33.3333%;
+}
+
+.adventure-showcase-3 li {
+  width: 50%;
+}
+
+/* ---------------------------------------------*/
+/* URBAN */
+/* ---------------------------------------------*/
+.urban-showcase li {
+  width: 33.3333%;
+}
+
+.urban-showcase-2 li {
+  width: 50%;
+}
+
+/* ---------------------------------------------*/
+/* QUOTE */
+/* ---------------------------------------------*/
+.quote h2 {
+  font-size: 4em;
+}
+
+/* ---------------------------------------------*/
+/* TABLE */
+/* ---------------------------------------------*/
+table {
+  margin: 0 auto;
+}
+
+tr {
+  background-color: #f4f4f4;
+}
+
+td {
+  padding: 20px 25px;
+}
+
+td:nth-child(2n + 1) {
+  background-color: #e4e4e4;
+}
+
+td:nth-child(2n) {
+  padding-right: 50px;
+}
+
+td a {
+  text-decoration: none;
+}
+
+.table {
+  margin: 60px auto 0;
+}
+
+.table h1 {
+  color: #c4c3c3;
+  margin: 20px auto;
+}
+
+.table table {
+  color: #fff;
+  font-size: 1.5em;
+  opacity: 0.8;
+}
+
+.table th,
+.table td {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 20px 25px;
+}
